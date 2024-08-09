@@ -1,6 +1,5 @@
 import React from 'react'
 import '../Body/Body.css'
-
 const Body = ({children}) => {
   return (
     <div>
@@ -13,5 +12,4 @@ const Body = ({children}) => {
     </div>
   )
 }
-
 export default Body
