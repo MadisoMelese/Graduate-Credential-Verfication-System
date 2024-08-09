@@ -1,10 +1,13 @@
 import React from 'react'
 import '../Body/Body.css'
-function Body() {
+
+const Body = ({children}) => {
   return (
     <div>
             <div className='body-main'>
-              <div className='body-card'></div>
+              <div className='body-card'>
+                {children}
+              </div>
             </div>
 
     </div>
