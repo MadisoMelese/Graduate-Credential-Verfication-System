@@ -1,0 +1,83 @@
+.student-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.search-container{
+    /* background-color: yellow; */
+    width: 530px;
+    height: 60px;
+    margin-right: 600px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.search-container input[type="text"]{
+    width: 250px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    background-color:  #e0edff;
+    font-size: 16px;
+    outline: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+.search-container input[type="text"]::placeholder{
+    color: #bbb;
+}
+.search-container .search-btn{
+    
+    margin-left: 8px;
+    padding: 10px 15px;
+    border-radius: 30px;
+
+    background-color: #87a9ff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+   align-items: center; 
+   justify-content: center;
+}
+.search-container .search-btn:hover {
+    background-color: #082f7b; 
+    color: white;
+  }
+
+  .search-container i{
+    font-size: 30px;
+  }
+  .certificate img{
+    max-width: 70%;
+    max-width: 55%;
+    padding-left: 300px;
+    padding-top: 10px;
+
+  }
+  .download-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 30px;
+    background-color: #2f72ef;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 0px 5px  rgba(0, 0, 0, 1);
+    margin-top: 5px;
+
+
+  }
+ .download-btn:hover {
+    background-color: #ffffff;
+    color: black;
+    border: solid 2px black;
+  }
+
+  .download-btn i{
+    font-size: 25px;
+
+  }
