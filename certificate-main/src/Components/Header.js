@@ -3,8 +3,13 @@ import '../Components/Header.css'
 
 function Header() {
   return (
-    <div>
-        <h1>Header</h1>
+    <div className='header'>
+        <div className='sub-container'>
+            <div className="profile"></div>
+            <div className="logout">
+                <p>Log out</p>
+            </div>
+        </div>
     </div>
   )
 }
