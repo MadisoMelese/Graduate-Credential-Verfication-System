@@ -18,7 +18,7 @@ function AdminPage() {
       const selectedFile = e.target.files[0];
       if (selectedFile) {
         setFile(selectedFile);
-        setFileName(selectedFile.name); // Update file name state
+        setFileName(selectedFile.name); 
         console.log('file changed');
       }
     };
@@ -34,15 +34,18 @@ function AdminPage() {
       } catch (error) {
         console.log(error)
           setMessage('Upload failed');
-          alert("Duplication Error")
+          alert("Error uploading file " )
       }
   };
 
   return (
     <Body>
     <div className='admin'>
-    {/* <input type="file" onChange={handleFileChange} />
-    <button onClick={handleUpload}>Upload</button> */}
+      <div>
+      <p className='msg'>Welcome To <br/> Admin <br/>Dashboard</p>
+
+      </div>
+  
 
 
       <div className="upload">

@@ -1,18 +1,29 @@
-.admin{
+.admin {
     height: 100%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    /* overflow-y: scroll; */
+    background-image: url('../assets/Screenshot\ 2024-08-21\ 000328.png');
+    background-size: 'cover';
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    justify-content: center;
+    /* padding-left: 130px; */
+    border-radius: 20px;
+    position: relative;
+
 }
-.admin::-webkit-scrollbar{
-display: none;
+
+.admin::-webkit-scrollbar {
+    display: none;
 }
-.upload{
+
+.upload {
     border: 2px dashed rgb(187, 183, 183);
     display: flex;
-    justify-content: center;
     height: 98px;
     width: 203px;
     border-radius: 5px;
@@ -24,34 +35,53 @@ display: none;
     margin-top: 100px;
     box-shadow: 0px 0px 10px 2px rgba(130, 127, 127, 0.5);
     cursor: pointer;
+    /* margin-bottom: 100px; */
+    /* margin-right: 40rem; */
+    margin-left: 5rem;
+    position: relative;
+    bottom: 4rem;
 }
-.upload i{
+
+.upload i {
     font-size: 30px;
     margin-top: 20px;
 }
-.upload p{
+
+.upload p {
     font-size: 15px;
     margin-top: 5px;
 }
-.upload-btn{
+
+.upload-btn {
     width: 150px;
     height: 40px;
     border-radius: 30px;
-    background-color:  #95b9ff;
+    background-color: #95b9ff;
     margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     box-shadow: 0px 0px 10px 2px rgba(122, 122, 123, 0.5);
+    /* margin-right: 40rem; */
+    margin-left: 5rem;
+    position: relative;
+    bottom: 5rem;
+
+
 
 }
-.upload-btn:hover{
-    background-color: rgb(8,47,123,1);
+
+.upload-btn:hover {
+    background-color: rgb(8, 47, 123, 1);
     color: #95b9ff;
     transition: 0.6s;
 }
-
-
-
-
+.msg{
+    font-size: 50px;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    margin-left: 5rem;
+    line-height: 3rem;
+}

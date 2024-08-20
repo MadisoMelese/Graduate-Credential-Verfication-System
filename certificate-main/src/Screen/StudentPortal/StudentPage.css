@@ -69,13 +69,14 @@
     box-shadow: 0px 0px 5px  rgba(0, 0, 0, 1);
     margin-top: 5px;
     cursor: pointer;
+    margin-top: 10px;
 
 
   }
  .download-btn:hover {
     background-color: #ffffff;
     color: black;
-    border: solid 2px black;
+    /* border: solid 2px black; */
   }
 
   .download-btn i{
