@@ -8,4 +8,4 @@ const CertificateSchema = new mongoose.Schema({
     endDate: { type: Date, required: true }
 });
 
-module.exports = mongoose.model('Certificate', CertificateSchema);
+module.exports = mongoose.model('certificate', CertificateSchema);
