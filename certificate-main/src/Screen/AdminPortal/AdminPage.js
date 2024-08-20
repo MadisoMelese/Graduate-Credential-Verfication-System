@@ -1,65 +1,60 @@
-import React from 'react'
+import React,{ useState, useRef } from 'react'
 import '../AdminPortal/AdminPage.css'
 import Body from '../../Components/Body/Body'
+import axios from 'axios';
+
 
 function AdminPage() {
+  const fileInputRef = useRef(null);
+  const [file, setFile] = useState(null);
+    const [message, setMessage] = useState('');
+    const [fileName, setFileName] = useState('Browse Files .csv/excel'); 
+
+    const handleIconClick = () => {
+      fileInputRef.current.click();
+      console.log('icon clicked')
+    };
+    const handleFileChange = (e) => {
+      const selectedFile = e.target.files[0];
+      if (selectedFile) {
+        setFile(selectedFile);
+        setFileName(selectedFile.name); // Update file name state
+        console.log('file changed');
+      }
+    };
+    const handleUpload = async () => {
+      const formData = new FormData();
+      formData.append('file', file);
+
+      try {
+          const response = await axios.post('http://localhost:5000/admin/upload', formData);
+          setMessage(response.data.message);
+          console.log(formData)
+          alert("Uploaded Successfully")
+      } catch (error) {
+        console.log(error)
+          setMessage('Upload failed');
+          alert("Duplication Error")
+      }
+  };
+
   return (
     <Body>
     <div className='admin'>
+    {/* <input type="file" onChange={handleFileChange} />
+    <button onClick={handleUpload}>Upload</button> */}
+
+
       <div className="upload">
-      <i class='bx bx-cloud-upload'></i>
-      <p>Browse Files .csv/excel</p>
+      <input type="file" style={{ display: 'none' }}  ref={fileInputRef} onChange={handleFileChange} />
+      <i className='bx bx-cloud-upload' onClick={handleIconClick}></i>
+      <p>{fileName}</p>
       </div>
-      <div className="upload-btn">
+      <div className="upload-btn" onClick={handleUpload}>
         <p>Upload</p>
       </div>
-      <div className="table">
-      <table>
-            <tr>
-                <th>SL No.</th>
-                <th>Certificate ID</th>
-                <th>Student Name</th>
-                <th>Domain Name</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-            </tr>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>228942</td>
-                <td>Spider Man</td>
-                <td>Web-Developer</td>
-                <td>03-12-2023</td>
-                <td>03-12-2024</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>467382</td>
-                <td>Bat-Man</td>
-                <td>UI/UX Design</td>
-                <td>10-03-2-2024</td>
-                <td>10-0402024</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>228942</td>
-                <td>Spider Man</td>
-                <td>Web-Developer</td>
-                <td>03-12-2023</td>
-                <td>03-12-2024</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>467382</td>
-                <td>Bat-Man</td>
-                <td>UI/UX Design</td>
-                <td>10-03-2-2024</td>
-                <td>10-0402024</td>
-            </tr>
-            
-        </tbody>
-    </table>
-      </div>
+     
+     
     </div>
     </Body>
   )

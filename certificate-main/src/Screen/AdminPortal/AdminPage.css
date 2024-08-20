@@ -52,31 +52,6 @@ display: none;
     transition: 0.6s;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse; 
-    margin-top: 100px;
-    border-radius: 30px;
-    overflow: hidden;
-}
 
- td {
-    border-right: 2.5px solid white; 
-    padding: 8px; 
-    text-align: left;
-    background-color: #c9d8f8;
-    height: 30px;
-    
-}
-th{
-    border-right: 2.5px solid white; 
-    padding: 8px; 
-    text-align: center;
-    background-color: #95b9ff;
-    color: white;
-    height: 80px;
-    width: auto;
-
-}
 
 
