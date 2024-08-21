@@ -16,9 +16,11 @@ function StudentPage() {
     try {
       const response = await axios.get(`http://localhost:5000/student/${certificateId}`);
       setCertificateData(response.data);
+      console.log("file fetched")
     } catch (err) {
       console.error('Error fetching certificate data', err);
       alert('Certificate not found')
+      console.log(certificateId)
     }
   };
 
