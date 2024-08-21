@@ -1,25 +1,18 @@
 .admin {
     height: 100%;
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
-    /* overflow-x: hidden; */
-    /* overflow-y: scroll; */
     background-image: url('../assets/Screenshot\ 2024-08-21\ 000328.png');
     background-size: 'cover';
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     justify-content: center;
-    /* padding-left: 130px; */
     border-radius: 20px;
     position: relative;
 
 }
 
-.admin::-webkit-scrollbar {
-    display: none;
-}
 
 .upload {
     border: 2px dashed rgb(187, 183, 183);
@@ -35,8 +28,6 @@
     margin-top: 100px;
     box-shadow: 0px 0px 10px 2px rgba(130, 127, 127, 0.5);
     cursor: pointer;
-    /* margin-bottom: 100px; */
-    /* margin-right: 40rem; */
     margin-left: 5rem;
     position: relative;
     bottom: 4rem;
@@ -63,7 +54,6 @@
     align-items: center;
     cursor: pointer;
     box-shadow: 0px 0px 10px 2px rgba(122, 122, 123, 0.5);
-    /* margin-right: 40rem; */
     margin-left: 5rem;
     position: relative;
     bottom: 5rem;

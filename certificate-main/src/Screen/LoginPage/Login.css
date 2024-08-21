@@ -1,0 +1,76 @@
+.maindiv {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(8,47,123,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+} 
+
+.login-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    font-weight: 550;
+    font-style: italic;
+}
+
+.input-group input {
+    width: 250px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    width: 140px;
+    padding: 10px;
+    background-color: #78a0ef;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 55px;
+    margin-top: 20px;
+}
+
+button:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(8,47,123,1);
+    border: solid .5px black;
+}
+p{
+    color: black;
+}
