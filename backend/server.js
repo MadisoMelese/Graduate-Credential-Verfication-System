@@ -17,7 +17,7 @@ const adminRoutes = require('./routes/adminRoutes');
 const app = express();
 app.use(cors(
   {
-    origin:["https://certificate-verificationn-system-api.vercel.app"],
+    origin:[""],
     methods:["POST","GET"],
     credentials:true
   }
