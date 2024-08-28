@@ -18,9 +18,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/',(req,res)=>{
- res.json("Hello")
-});
+// app.get('/',(req,res)=>{
+//  res.json("Hello")
+// });
 
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
