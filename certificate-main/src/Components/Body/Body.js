@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Body/Body.css'
 import { useNavigate } from 'react-router-dom'
+
 const Body = ({children}) => {
   const navigate = useNavigate()
   const goToHome = () => {

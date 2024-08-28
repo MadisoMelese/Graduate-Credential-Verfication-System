@@ -46,8 +46,6 @@ function AdminPage() {
 
       </div>
   
-
-
       <div className="upload">
       <input type="file" style={{ display: 'none' }}  ref={fileInputRef} onChange={handleFileChange} />
       <i className='bx bx-cloud-upload' onClick={handleIconClick}></i>
