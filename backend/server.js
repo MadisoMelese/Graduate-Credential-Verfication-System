@@ -15,13 +15,11 @@ dotenv.config();
 
 const adminRoutes = require('./routes/adminRoutes');
 const app = express();
-app.use(cors(
-  {
-    origin:["https://certificate-verificationn-system-frontend.vercel.app/"],
-    methods:["POST","GET"],
-    credentials:true
-  }
-));
+app.use(cors({
+    origin: "https://certificate-verificationn-system-frontend.vercel.app", // Your frontend URL
+    methods: ["POST", "GET", "OPTIONS"],
+    credentials: true // Allow credentials (cookies, authorization headers, etc.)
+}));
 app.use(express.json());
 
 // app.get('/',(req,res)=>{
