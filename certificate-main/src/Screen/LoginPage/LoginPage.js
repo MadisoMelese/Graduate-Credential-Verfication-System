@@ -30,6 +30,7 @@ axios.defaults.withCredentials=true;
             <label >Username</label>
             <input type="text" id="email" name="email" required 
 
+
             />
         </div>
         <div className="input-group">
