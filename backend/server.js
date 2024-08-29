@@ -7,19 +7,17 @@ const bcrypt = require('bcryptjs');
 const User = require('./models/User');
  // Adjust the path to where your User model is located
  const jwt = require('jsonwebtoken');
-
-
-
-
 dotenv.config();
 
 const adminRoutes = require('./routes/adminRoutes');
 const app = express();
-app.use(cors({
-    origin: "https://certificate-verificationn-system-frontend.vercel.app", // Your frontend URL
-    methods: ["POST", "GET", "OPTIONS"],
-    credentials: true // Allow credentials (cookies, authorization headers, etc.)
-}));
+const corsOptions = {
+  origin: 'https://certificate-verificationn-system-frontend.vercel.app/', // Change to your frontend URL
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // app.get('/',(req,res)=>{
