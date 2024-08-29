@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import '../StudentPortal/StudentPage.css'
-import Body from '../../Components/Body/Body'
+import Body from '../Components/Body/Body'
 import 'boxicons/css/boxicons.min.css';
 import jsPDF from 'jspdf';
 import axios from 'axios';
