@@ -1,6 +1,6 @@
 import React,{ useState, useRef } from 'react'
 import '../AdminPortal/AdminPage.css'
-import Body from '../../Components/Body/Body'
+import Body from '../Components/Body/Body'
 import axios from 'axios';
 
 
