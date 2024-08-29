@@ -1,10 +1,8 @@
 import React , {useState}from 'react'
 import '../LoginPage/Login.css'
-import axios from 'axios';
-
-
 
 function LoginPage() {
+<<<<<<< HEAD
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 axios.defaults.withCredentials=true;
@@ -24,20 +22,23 @@ axios.defaults.withCredentials=true;
     }
 };
 
+=======
+  
+>>>>>>> parent of e1ce92e (login backend integrated)
   return (<div className='maindiv'>
     <div className="login-container">
     <h2>Login</h2>
-    <form  onSubmit={handleSubmit}>
+    <form  method="POST">
         <div className="input-group">
             <label >Username</label>
             <input type="text" id="email" name="email" required 
-            value={username} onChange={(e) => setUsername(e.target.value)}
+
             />
         </div>
         <div className="input-group">
             <label >Password</label>
             <input type="password" id="password" name="password" required 
-            value={password} onChange={(e) => setPassword(e.target.value)} 
+            
             />
         </div>
         <button type="submit">Login</button>
