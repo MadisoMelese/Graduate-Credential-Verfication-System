@@ -29,15 +29,18 @@ axios.defaults.withCredentials=true;
     <div className="login-container">
     <h2>Login</h2>
     <form  method="POST">
+    <form  method="POST">
         <div className="input-group">
             <label >Username</label>
             <input type="text" id="email" name="email" required 
+
 
             />
         </div>
         <div className="input-group">
             <label >Password</label>
             <input type="password" id="password" name="password" required 
+            
             
             />
         </div>
