@@ -2,7 +2,6 @@ import React , {useState}from 'react'
 import '../LoginPage/Login.css'
 
 function LoginPage() {
-<<<<<<< HEAD
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 axios.defaults.withCredentials=true;
@@ -22,18 +21,14 @@ axios.defaults.withCredentials=true;
     }
 };
 
-=======
-  
->>>>>>> parent of e1ce92e (login backend integrated)
   return (<div className='maindiv'>
     <div className="login-container">
     <h2>Login</h2>
-    <form  method="POST">
+
     <form  method="POST">
         <div className="input-group">
             <label >Username</label>
             <input type="text" id="email" name="email" required 
-
 
             />
         </div>
