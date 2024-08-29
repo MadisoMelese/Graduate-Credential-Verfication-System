@@ -15,9 +15,11 @@ const corsOptions = {
   origin: 'https://certificate-verificationn-system-frontend.vercel.app/', // Change to your frontend URL
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
+  preflightContinue: false,
   optionsSuccessStatus: 204
 };
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use(express.json());
 
 // app.get('/',(req,res)=>{
