@@ -12,7 +12,7 @@ dotenv.config();
 const adminRoutes = require('./routes/adminRoutes');
 const app = express();
 const corsOptions = {
-  origin: 'https://certificate-verificationn-system-frontend.vercel.app/', // Change to your frontend URL
+  origin: 'https://certificate-verificationn-system-frontend.vercel.app', // Change to your frontend URL
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   preflightContinue: false,
