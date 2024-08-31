@@ -27,7 +27,7 @@ function AdminPage() {
       formData.append('file', file);
 
       try {
-          const response = await axios.post('http://localhost:5000/admin/upload', formData);
+          const response = await axios.post(`${import.meta.env.BACKEND_URL}/admin/upload`, formData);
           setMessage(response.data.message);
           console.log(formData)
           alert("Uploaded Successfully")

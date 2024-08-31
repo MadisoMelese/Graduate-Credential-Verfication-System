@@ -14,7 +14,7 @@ function StudentPage() {
 
   const fetchCertificate = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/student/${certificateId}`);
+      const response = await axios.get(`${import.meta.env.BACKEND_URL}/student/${certificateId}`);
       setCertificateData(response.data);
       console.log("file fetched")
     } catch (err) {
