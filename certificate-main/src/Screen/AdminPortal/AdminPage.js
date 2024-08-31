@@ -27,7 +27,7 @@ function AdminPage() {
       formData.append('file', file);
 
       try {
-          const response = await axios.post('https://certificate-verificationn-system-api.vercel.app/admin/upload', formData);
+          const response = await axios.post('http://localhost:5000/admin/upload', formData);
           setMessage(response.data.message);
           console.log(formData)
           alert("Uploaded Successfully")

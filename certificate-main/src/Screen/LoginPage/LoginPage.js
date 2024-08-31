@@ -1,14 +1,17 @@
 import React , {useState}from 'react'
 import '../LoginPage/Login.css'
+import axios from 'axios';
+
+
 
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-axios.defaults.withCredentials=true;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const res = await axios.post('https://certificate-verificationn-system-api.vercel.app/login', { username, password });
+        const res = await axios.post('http://localhost:5000/login', { username, password });
         localStorage.setItem('token', res.data.token);
         if (res.data.role === 'admin') {
             window.location.href = '/admin';
@@ -24,20 +27,17 @@ axios.defaults.withCredentials=true;
   return (<div className='maindiv'>
     <div className="login-container">
     <h2>Login</h2>
-
-    <form  method="POST">
+    <form  onSubmit={handleSubmit}>
         <div className="input-group">
             <label >Username</label>
             <input type="text" id="email" name="email" required 
-
-
+            value={username} onChange={(e) => setUsername(e.target.value)}
             />
         </div>
         <div className="input-group">
             <label >Password</label>
             <input type="password" id="password" name="password" required 
-            
-            
+            value={password} onChange={(e) => setPassword(e.target.value)} 
             />
         </div>
         <button type="submit">Login</button>
