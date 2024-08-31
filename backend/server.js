@@ -7,24 +7,17 @@ const bcrypt = require('bcryptjs');
 const User = require('./models/User');
  // Adjust the path to where your User model is located
  const jwt = require('jsonwebtoken');
+
+
+
+
 dotenv.config();
 
 const adminRoutes = require('./routes/adminRoutes');
 const app = express();
-const corsOptions = {
-  origin: 'https://certificate-verificationn-system-frontend.vercel.app', // Change to your frontend URL
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  preflightContinue: false,
-  optionsSuccessStatus: 204
-};
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
-// app.get('/',(req,res)=>{
-//  res.json("Hello")
-// });
 
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
@@ -58,6 +51,7 @@ app.post('/login', async (req, res) => {
   } catch (err) {
       console.error('Server error:', err);
       res.status(500).json({ message: 'Server error' });
+      console.log('ERROR 500')
   }
 });
 
@@ -66,7 +60,7 @@ mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log('MongoDB connected'))
-  .catch(err => console.log('Not Connected'));
+  .catch(err => console.log(err));
 
 app.use('/admin', adminRoutes);
 
