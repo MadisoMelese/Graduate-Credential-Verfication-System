@@ -20,7 +20,7 @@ function LoginPage() {
         }
         console.log("try block");
     } catch (err) {
-        console.error('Login error:', err.response ? 'error 1' : 'error 2');
+        console.error('Login error:', err.response ? 'error 1' : err);
     }
 };
 
