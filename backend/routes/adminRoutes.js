@@ -3,7 +3,11 @@ const multer = require('multer');
 const { uploadExcelData } = require('../controllers/adminController');
 
 const router = express.Router();
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({ dest: './uploads/' });
+
+
+
+
 
 router.post('/upload', upload.single('file'), uploadExcelData);
 
