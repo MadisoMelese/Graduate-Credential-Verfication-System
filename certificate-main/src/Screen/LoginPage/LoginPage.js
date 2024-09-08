@@ -11,7 +11,7 @@ function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const res = await axios.post('http://localhost:5000/login', { username, password });
+        const res = await axios.post(`${process.env.BACKEND_URL}/login`, { username, password });
         localStorage.setItem('token', res.data.token);
         if (res.data.role === 'admin') {
             window.location.href = '/admin';
@@ -20,7 +20,7 @@ function LoginPage() {
         }
         console.log("try block");
     } catch (err) {
-        console.error('Login error:', err.response ? 'error 1' : 'error 2');
+        console.error('Login error:', err.response ? 'error 1' : err);
     }
 };
 
