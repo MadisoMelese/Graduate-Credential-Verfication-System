@@ -7,6 +7,7 @@ const bcrypt = require('bcryptjs');
 const User = require('./models/User');
  // Adjust the path to where your User model is located
  const jwt = require('jsonwebtoken');
+ 
 
 
 
@@ -17,7 +18,7 @@ const adminRoutes = require('./routes/adminRoutes');
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+app.use("/uploads", express.static("uploads"));
 
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
