@@ -99,6 +99,7 @@ function StudentPage() {
           />
           <div className='search-btn'  onClick={fetchCertificate}>Search</div>
         </div>
+        <div className="certificate-container">
         <div className='certificate'>
         {certificateData && (
         <div style={styles.certificatePreview}>
@@ -112,15 +113,19 @@ function StudentPage() {
             from {new Date(certificateData.startDate).toLocaleDateString()} to {new Date(certificateData.endDate).toLocaleDateString()}.
           </p>
           <div style={styles.signatureSection}>
-            <div style={styles.signatureLine}></div>
-            <p style={styles.signatureText}>Authorized Signature</p>
-          </div>
           <div style={styles.sealSection}>
             <div style={styles.sealCircle}></div>
             <p style={styles.sealText}>Official Seal</p>
+          </div>  
+            <div><div style={styles.signatureLine}></div>
+            <p style={styles.signatureText}>Authorized Signature</p>
+            </div>
+            
           </div>
+         
         </div>
       )}
+        </div>
         </div>
        {certificateData && (<div className='download-btn' onClick={generatePDF}><i class='bx bxs-download' ></i>Download PDF</div>)}
         </div>
@@ -165,10 +170,11 @@ const styles = {
   signatureSection: {
     marginTop: '40px',
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
+    // flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   signatureLine: {
+    marginTop:'40px',
     width: '200px',
     borderBottom: '1px solid black',
   },
@@ -178,9 +184,9 @@ const styles = {
     fontSize: '16px',
   },
   sealSection: {
-    position: 'absolute',
+    position: 'relative',
     top: 'calc(100% - 150px)',
-    left: '250px',
+    // left: '250px',
     textAlign: 'center',
   },
   sealCircle: {
