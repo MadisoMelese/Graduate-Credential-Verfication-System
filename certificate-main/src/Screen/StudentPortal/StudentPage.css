@@ -1,18 +1,21 @@
 .student-main{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 5%;
+
 
 }
 .search-container{
-    /* background-color: yellow; */
-    width: 530px;
+    width: 20%;
     height: 60px;
-    margin-right: 600px;
-    margin-top: 20px;
+    margin-top: 2%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    margin-left: 5%;
 }
 .search-container input[type="text"]{
     width: 250px;
@@ -82,4 +85,65 @@
   .download-btn i{
     font-size: 25px;
 
+  }
+
+  /* @media only screen and (max-width: 1600px) {
+    .student-main {
+      padding-left: 200px;
+    }
+  } */
+  
+  @media only screen and (max-width: 1100px) {
+    .search-container {
+      margin-left: 10%;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .search-container {
+      margin-left: 15%;
+    }
+    .student-main{
+      overflow-y: scroll;
+      overflow-x: scroll;
+    }
+    .student-main::-webkit-scrollbar{
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .search-container {
+      margin-left: 25%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .search-container {
+      margin-right: 25%;
+      width: 100%;
+      height: 50px;
+      margin-top: 15%;
+      flex-direction: column;
+      justify-content: center;
+      /* position: absolute; */
+
+    }
+    .search-container input[type="text"]{
+      width: 70%;
+    }
+    .student-main{
+      /* justify-content: center; */
+      align-items: center;
+    }
+    .search-btn{
+      width: 50px;
+      height: 20px;
+      margin-top: 10px;
+    }
+    .student-main{
+      /* justify-content: center; */
+      align-items: center;
+      padding: 0;
+    }
+    
   }
