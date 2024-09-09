@@ -74,3 +74,19 @@
     margin-left: 5rem;
     line-height: 3rem;
 }
+@media only screen and (max-width: 780px) {
+    .admin{
+        background-image: none;
+    }
+    .upload{
+        margin-left: 20px;
+    }
+    .upload-btn{
+        margin-left: 20px;
+    }
+    .msg{
+        margin-left: 20px;
+        font-size: 35px;
+    }
+    }
+  
