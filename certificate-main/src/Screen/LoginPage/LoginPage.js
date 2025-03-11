@@ -14,6 +14,7 @@ function LoginPage() {
         console.log(process.env.REACT_APP_BASE_URL);
         
         const res = await axios.post(`${process.env.REACT_APP_BASE_URL}/login`, { username, password });
+        console.log(res)
         localStorage.setItem('token', res.data.token);
         if (res.data.role === 'admin') {
             window.location.href = '/admin';
