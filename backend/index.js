@@ -1,3 +1,4 @@
+// password: jS997cxKkg3PY6mf
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
@@ -7,10 +8,6 @@ const bcrypt = require('bcryptjs');
 const User = require('./models/User');
  // Adjust the path to where your User model is located
  const jwt = require('jsonwebtoken');
- 
-
-
-
 
 dotenv.config();
 
@@ -78,5 +75,5 @@ app.get('/student/:id', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 500;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
