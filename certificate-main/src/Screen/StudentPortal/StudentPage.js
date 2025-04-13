@@ -19,8 +19,9 @@ function StudentPage() {
       console.log("file fetched")
     } catch (err) {
       console.error('Error fetching certificate data', err);
-      alert('Certificate not found')
-      console.log(certificateId)
+      setCertificateData(null); // Reset certificate data if not found
+      alert(`Certificate not found with ID: ${certificateId}`);
+      console.log(`certificateId not found: ${certificateId}`)
     }
   };
 
