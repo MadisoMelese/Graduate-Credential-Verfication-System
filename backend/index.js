@@ -20,30 +20,25 @@ app.use("/uploads", express.static("uploads"));
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
   console.log('Received login attempt:', { username, password });
-
   try {
       // Find user by username
       const user = await User.findOne({ username });
       console.log('Found user:', user);
-
       if (!user) {
           return res.status(400).json({ message: 'User not found' });
       }
-
       // Compare provided password with stored hashed password
       const isMatch = await bcrypt.compare(password, user.password);
       console.log('Password comparison:', { hashedPassword: user.password, providedPassword: password, isMatch });
-
       if (!isMatch) {
           return res.status(400).json({ message: 'Invalid credentials' });
       }
-
       // Generate JWT token
       const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, {
           expiresIn: '1h',
       });
       console.log('Generated token:', token);
-
+      
       // Respond with token and role
       res.json({ token, role: user.role });
   } catch (err) {
